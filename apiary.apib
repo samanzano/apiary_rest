@@ -80,12 +80,25 @@ form of choices.
             }
             
             
-## Twitter [/twitter/]
+## Evaluate Article List [/mobile/evaluateArticleList]
 
-### Twitter [OPTIONS]
+### List All Questions [POST]
 
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+            "articleList":["4848-100","4841-100"]
+        }
+        
 + Response 200 (application/json)
 
-            {
-                "status":"success"
-            }
+        {
+             "articleList": [
+                0 : "4848-100-13000-CARNE MOLIDA",
+                1 : "4841-100-399000-ABASTERO VACUNO ENV"
+            ]
+        }
